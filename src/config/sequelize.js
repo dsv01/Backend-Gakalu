@@ -19,7 +19,9 @@ const sequelize = (process.env.DB_CONNECTION === 'sqlite') ?
 
 module.exports = sequelize;
 
-//require('../models/');
+require('../models/Game');
+require('../models/Store');
+require('../models/User');
 
 for (mod in sequelize.models) {
   if (sequelize.models[mod].associate instanceof Function) {
