@@ -1,0 +1,27 @@
+{
+  "name": "backend-gakalu",
+  "version": "1.0.0",
+  "description": "Backend para o aplicativo Gakalu",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsv01/Backend-Gakalu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsv01/Backend-Gakalu/issues"
+  },
+  "homepage": "https://github.com/dsv01/Backend-Gakalu#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-dev": "^8.0.0",
+    "sequelize": "^6.32.1"
+  }
+}
