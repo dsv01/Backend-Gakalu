@@ -49,7 +49,7 @@ const show =  async(request, response) =>
 //Função para editar um usuário especifico
 const update = async(request, response) =>
 {
-    const { id } = request.params;
+    const {id} = request.params;
     try
     {
         const [updated] = await User.update(request.body, {where: {id:id}});

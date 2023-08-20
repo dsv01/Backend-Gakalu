@@ -29,7 +29,7 @@ const index = async(request, response) =>
     }
 }
 
-//Função para pegar um usuário especifico pelo seu id
+//Função para pegar umaLojas especifica pelo seu id
 const show =  async(request, response) =>
 {
     const { id } = request.params;

@@ -54,7 +54,11 @@ const User = sequelize.define("User",
     timestamps: false
 });
 
-User.hasMany(models.Game);
-User.hasMany(models.Store);
+
+User.associate = function(models)
+{
+    User.hasMany(models.Game);
+    User.hasMany(models.Store);
+}
 
 module.exports = User

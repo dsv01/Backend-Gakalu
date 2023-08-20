@@ -62,6 +62,10 @@ const Game = sequelize.define("Game",
     timestamps: false
 })
 
-Game.belongsTo(models.User);
+
+Game.associate = function(models)
+{
+    Game.belongsTo(models.User);
+}
 
 module.exports = Game

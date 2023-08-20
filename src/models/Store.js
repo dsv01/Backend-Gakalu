@@ -53,6 +53,10 @@ const Store = sequelize.define("Store",
     timestamps: false
 })
 
-Store.belongsTo(models.User);
+
+Store.associate = function(models)
+{
+    Store.belongsTo(models.User)
+}
 
 module.exports = Store;
