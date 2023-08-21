@@ -5,13 +5,6 @@ const sequelize = require("../config/sequelize");
 //Definição da tabela de Usuário do banco de dados
 const User = sequelize.define("User",
 {
-    id:
-    {
-        type: DataType.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-
     name:
     {
         type: DataType.STRING,

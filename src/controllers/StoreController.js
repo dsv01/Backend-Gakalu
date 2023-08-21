@@ -35,7 +35,7 @@ const show =  async(request, response) =>
     const { id } = request.params;
     try
     {
-        const user = await User.findByPk(id);
+        const user = await Store.findByPk(id);
         return response.status(200).json({user});
     }
     catch(error)
@@ -72,12 +72,12 @@ const destroy = async(request, response) =>
     {
         const deleted = await User.destroy({where : {id:id}})
         if(deleted)
-            return response.status(200).json("Usuário deletado com sucesso")
+            return response.status(200).json("Loja deletada com sucesso")
         throw new Error();
     }
     catch(error)
     {
-        return response.status(500).json("Usuário não encontrado")
+        return response.status(500).json("Loja não encontrada")
     }
 }
 

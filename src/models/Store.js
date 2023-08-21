@@ -5,13 +5,6 @@ const sequelize = require("../config/sequelize");
 //Definição da tabela de Lojas do banco de dados
 const Store = sequelize.define("Store",
 {
-    id:
-    {
-        type: DataType.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-
     name:
     {
         type: DataType.STRING,

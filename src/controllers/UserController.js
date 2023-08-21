@@ -34,11 +34,11 @@ const index = async(request, response) =>
 //Função para pegar um usuário especifico pelo seu id
 const show =  async(request, response) =>
 {
-    const { id } = request.params;
+    const {id} = request.params;
     try
     {
         const user = await User.findByPk(id);
-        return response.status(200).json({user});
+        return response.status(200).json(user);
     }
     catch(error)
     {
@@ -91,7 +91,7 @@ const addRelationGame = async(request, response) =>
     {
         const user = await User.findByPk(id);
         const game = await Game.findByPk(request.body.GameId);
-        await user.setGame(game);
+        await user.setGames(game);
         return response.status(200).json(user);
     }
     catch(error)
@@ -107,7 +107,7 @@ const removeRelationGame = async(request, response) =>
     try
     {
         const user = await User.findByPk(id);
-        await user.setGame(null);
+        await user.setGames(null);
         return response.status(200).json(user);
     }
     catch(error)
@@ -124,7 +124,7 @@ const addRelationStore = async(request, response) =>
     {
         const user = await User.findByPk(id);
         const store = await Store.findByPk(request.body.StoreId);
-        await user.setStore(store);
+        await user.setStores(store);
         return response.status(200).json(user);
     }
     catch(error)
@@ -140,7 +140,7 @@ const removeRelationStore = async(request, response) =>
     try
     {
         const user = await User.findByPk(id);
-        await user.setStore(null);
+        await user.setStores(null);
         return response.status(200).json(user);
     }
     catch(error)
